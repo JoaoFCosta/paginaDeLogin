@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Site Teste</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-    <nav class="navigation">
-        <a href="#">Página principal</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
-        <a href="#">Login</a>
-    </nav>
-</header>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
 
     <div class="container">
-        <form class="login-form">
-            <h1>Login</h1>
-        <div class="input-box">
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
-        </div>
-            <div class="lembrar-senha">
-                <label><input type="checkbox"> Lembrar senha</label>
-                <a href="#">Esqueci a senha</a>
+        <div class="box">
+        <div class="box-login" id="login">
+            <div class="top-header">
+                <h3>Hello</h3>
             </div>
-			<button>LOGIN</button>
-			<p class="message">Não possui uma conta? <a href="#">Registre-se</a></p>
-		</form>
-        <form class="register-form">
-            <h1>Registre-se</h1>
-        <div class="input-box">
-            <input type="text" placeholder="Nome" required> 
-            <input type="email" placeholder="Email" required> 
-            <input type="password" placeholder="Senha" required>
-        </div>
-            <div class="aceito-termos">
-                <label><input type="checkbox" required> Concordo com os termos</label>
+            <div class="input-group">
+                 <div class="input-field">
+                    <input type="text" class="input-box" id="logEmail" required>
+                    <label for="logEmail">Email address</label>
+                 </div>
+                 <div class="input-field">
+                    <input type="password" class="input-box" id="logPassword" required>
+                    <label for="logPassword">Password</label>
+                    <div class="eye-area">
+                     <div  class="eye-box" onclick="myLogPassword()">
+                      <i class="fa-regular fa-eye" id="eye"></i>
+                      <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                   </div>
+                 </div>
+                 </div>
+                 <div class="remember">
+                    <input type="checkbox" id="formCheck" class="check">
+                    <label for="formCheck">Remember Me</label>
+                 </div>
+                 <div class="input-field">
+                    <input type="submit" class="input-submit" value="Sign In" required>
+                 </div>
+                 <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                 </div>
+                
             </div>
-			<button>REGISTRE-SE</button>
-			<p class="message">Já possui uma conta?<a href="#"> Login</a></p>
-		</form>
-    </div>
-
-
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-    <script>
-        $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
-    </script>
-
-
-</body>
+         </div>
+            <!---------------------------- register --------------------------------------->
+          <div class="box-register" id="register">
+            <div class="top-header">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="input-group">
+                 <div class="input-field">
+                    <input type="text" class="input-box" id="regUsername" required>
+                    <label for="regUsername">Username</label>
+                 </div>
+                 <div class="input-field">
+                    <input type="text" class="input-box" id="regEmail"  required>
+                    <label for="regEmail">Email address</label>
+                 </div>
+                 <div class="input-field">
+                    <input type="password" class="input-box" id="regPassword"  required>
+                    <label for="regPassword">Password</label>
+                    <div class="eye-area">
+                      <div  class="eye-box" onclick="myRegPassword()">
+                       <i class="fa-regular fa-eye" id="eye-2"></i>
+                       <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                    </div>
+                  </div>
+                 </div>
+                 
+                 <div class="remember">
+                    <input type="checkbox" id="formCheck2" class="check">
+                    <label for="formCheck2">Remember Me</label>
+                 </div>
+                 <div class="input-field">
+                    <input type="submit" class="input-submit" value="Sign Up" required>
+                 </div>
+            </div>
+         </div>
+         <div class="switch">
+            <a href="#" class="login active" onclick="login()">Login</a>
+            <a href="#" class="register" onclick="register()">Register</a>
+            <div class="btn-active" id="btn"></div>
+         </div>
+         
+        </div>
+        
+     </div>
+  </body>
+  <script src="./js/script.js"></script>
 </html>
